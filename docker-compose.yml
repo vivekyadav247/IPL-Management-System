@@ -3,12 +3,11 @@ services:
     image : mongo:6.0
     container_name: mongo
     ports:
-      - "27017:27017"
+      - "27018:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME : root
       MONGO_INITDB_ROOT_PASSWORD : root
-      MONGO_INITDB_DATABASE : auth
-
+      MONGO_INITDB_AUTH_SOURCE : admin
     volumes:
       - mongo_data:/data/db
 volumes:

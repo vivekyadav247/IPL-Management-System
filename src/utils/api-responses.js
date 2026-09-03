@@ -1,5 +1,5 @@
 class ApiResponses {
-  static ok(res, data = null, message) {
+  static success(res, data = null, message) {
     return res.status(200).json({
       status: "success",
       data,

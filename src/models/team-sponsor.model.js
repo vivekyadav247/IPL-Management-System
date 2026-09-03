@@ -16,4 +16,6 @@ const teamSponsorSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
+teamSponsorSchema.index({ teamId: 1, sponsorId: 1 }, { unique: true });
+
 export default mongoose.model("TeamSponsor", teamSponsorSchema);

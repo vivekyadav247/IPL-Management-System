@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docker:build": "docker-compose build",
+    "start": "node server.js",
+    "docker:build": "docker-compose -f docker-compose.yml build",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
     "docker:restart": "docker-compose down && docker-compose up -d",
